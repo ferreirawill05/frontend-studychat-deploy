@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&family=Titillium+Web:wght@600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+.centralizar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tit{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 207px;
+    letter-spacing: 2px;
+    color: #020f24;
+}
+
+.btn-estilo{
+    padding: 7px 30px !important;
+    font-size: 22px !important;
+    margin-top: 10px;
+}
+
+.form-control,.form-select{
+    margin: 10px 0;
+}
+
+.questionario{
+    width: 600px;
+}
+
+.header-meusChats{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #541CA8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.logo-header{
+    width: 110px;
+}
+
+.main-meusChats{
+    padding: 90px 0;
+}
+
+.container-titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linha{
+    width: 30%;
+}
+
+.titulo{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 107px;
+    letter-spacing: 2px;
+    color: #FF5D05;
+    text-transform: uppercase;
+}
+
+.container-card{
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 1144px;
+    margin: 0 auto;
+}
+
+.card-lp{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../assets/materia-linguagem.png');
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 500px;
+    background-size: 570px;
+}
+
+.card-cien{
+    display: flex;
+    padding: 65px 0 0 0;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../assets/materia-ciencias.png');
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 500px;
+    background-size: 570px;
+}
+
+.card-artes{
+    display: flex;
+    padding: 65px 0 0 0;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../assets/materia-artes.png');
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 500px;
+    background-size: 570px;
+}
+
+.card-mat{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../../assets/materia-matematica.png');
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 500px;
+    background-size: 570px;
+}
+
+.titulo-materia{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 91px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FF5D05;
+}
+
+.questao{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 76px;
+    letter-spacing: 0.1em;
+    color: #E8C821;
+}
+
+.quantidadeQuestoes{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 94.4536px;
+    line-height: 144px;
+    letter-spacing: 0.1em;
+    color: #E8C821;
+}
+
+.btn-comecar{
+    background: #FF5D05;
+    border-radius: 11.1429px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 59px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding: 5px 20px;
+}
+
+@media(max-width: 1280px){
+    
+    .titulo {
+        font-size: 40px;
+    }
+
+    .container-card {
+        grid-template-columns: 1fr;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-lp {
+        /* width: 525px; */
+        height: 500px;
+    }
+
+    .card-artes{
+        padding: 84px;
+    }
+
+    .card-config{
+        background-position: center;
+        margin-top: 30px;
+        background-size: 205%;
+        padding: 30px;
+        border-radius: 25px;
+    }
+
+    .titulo-materia{
+        font-size: 45px;
+        color: #ffffff;
+    }
+
+    .questao{
+        font-size: 48px;
+        color: #ffffff;
+    }
+
+    .quantidadeQuestoes{
+        font-size: 87px;
+        line-height: unset;
+    }
+
+    .btn-comecar {
+        border-radius: 11.1429px;
+        font-size: 45px;
+        line-height: unset;
+        padding: 5px 20px;
+        background: #541CA8;
+    }
+}
+
+@media(max-width: 625px){
+    
+    .header-meusChats{
+        height: 70px;
+    }
+
+    .logo-header {
+        width: 88px;
+    }
+
+    .titulo{
+        font-size: 22px;
+    }
+
+    .main-meusChats {
+        padding: 30px 0;
+    }
+
+    .container-card {
+        padding-top: 20px;
+    }
+
+    .card-config {
+        width: 100%;
+        height: unset;
+    }
+
+    .titulo-materia {
+        font-size: 30px;
+    }
+
+    .questao{
+        font-size: 40px;
+        line-height: unset;
+    }
+
+    .quantidadeQuestoes{
+        font-size: 65px;
+    }
+
+    .btn-comecar{
+        font-size: 33px;
+    }
+}

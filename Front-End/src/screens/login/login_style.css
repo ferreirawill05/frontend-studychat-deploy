@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&family=Titillium+Web:wght@600&display=swap');
+/* !!! alterar box-body, não limitar o tamanho de nada!!! */
+/* !!! arrumar imagem do undraw!!!*/
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+.logo-lg{
+    width: 195px;
+    height: 135px;
+}
+
+.txt-left{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    width: 420px;
+}
+
+.txt-left p{
+    font-size: 23px;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center; 
+    letter-spacing: 1px;
+}
+
+.txt-left h1{
+    font-size: 42px;
+    color: white;
+    font-family: 'Single day', sans-serif;
+}
+
+.h1-login {
+    font-family: 'Single day', sans-serif;
+    font-size: 55px;
+    margin-top: 15px;
+}
+
+.box-bodyL{
+    background-image: url(/src/assets/banner-login-fundo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.esquerdaL{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.esquerda p{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.direitaL{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.direitaL form{
+    background: rgba(255, 255, 255, 0.73);
+    border-radius: 21px;
+    width: 385px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%;
+}
+
+.direitaL input{
+    width: 18rem;
+    height: 3rem;
+    background: rgba(90, 124, 199, 0.85);
+    border-radius: 12px;
+    padding-left: 5px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.direitaL input::placeholder{
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+    padding-left: 1px;
+}
+
+.btn-formL{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    background: #FFDF4A;
+    border-radius: 9px;
+    color: #FF7A30;
+    border: none;
+    cursor: pointer;
+    width: 8rem;
+    height: 3.5rem;
+}
+
+.contaL{
+    font-family: 'Open Sans', 'sans-serif';
+    width: 340px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin-top: 30px;
+}
+
+.contaL a{
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #EB7A61;
+    border-radius: 5px;
+    width: 125px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redirectL{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redirectL button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.redirectL img{
+    width: 32px;
+    height: 34px;
+    margin-right: 7px;
+}
+
+@media(max-width: 1500px){
+
+    .box-bodyL{
+        background-image: url(/src/assets/login.png);
+    }
+
+    .logo-lg {
+        width: 190px;
+        height: 130px;
+    }
+
+    .txt-left{
+        width: 500px;
+        height: 540px;
+    }
+
+    .txt-left h1 {
+        font-size: 50px;
+    }
+
+    .txt-left p{
+        font-size: 26px;
+    }
+
+    .esquerdaL{
+        margin-top: 40px;
+    }
+    
+    .direitaL form{
+        height: 55%;
+    }
+}
+
+@media(max-width: 769px){
+
+    .box-bodyL{
+        background-image: url(/src/assets/Login-tablet.png);
+    }
+
+    .direitaL form {
+        height: 53%;
+    }
+
+    .esquerdaL{
+        display: none;
+    }
+
+    .h1-login{
+        font-size: 65px;
+    }
+
+}
+
+@media(max-width: 375px){
+
+    .box-bodyL{
+        background-image: url(/src/assets/Login-phone.png);
+    }
+
+    .direitaL form {
+        height: 55%;
+        width: 80%;
+    }
+
+    .h1-login {
+        font-size: 55px;
+        margin-top: 15px;
+    }
+
+    .direitaL input {
+        width: 15rem;
+        height: 2.8rem;
+    }
+
+    .contaL p{
+        font-size: 15px;
+    }
+
+    .contaL a{
+        width: 116px;
+    }
+
+    .contaL{
+        width: 305px;
+    }
+
+
+
+
+}

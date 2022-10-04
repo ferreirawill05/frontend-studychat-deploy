@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* !!! alterar box-body, não limitar o tamanho de nada!!! */
+/* !!! arrumar imagem do undraw!!!*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+.h1-login {
+    font-family: 'Single Day' sans-serif;
+    font-size: 65px;
+    margin: 60px 0;
+}
+
+.logo{
+    display: none;
+}
+
+.imput-choose{ 
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.btn-choose{
+    width: 12rem;
+    height: 2.7rem;
+    background-color: #FB9964;
+    border-radius: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box-body{
+    background-image: url(/src/assets/Cadastro.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.esquerda{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.direita{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.esquerda-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+    background-color: #ffffffa1;
+    width: 540px;
+    border-radius: 15px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+    width: 80%;
+    border-radius: 15px;
+}
+
+#professor{
+    display: none;
+}
+
+#aluno{
+    display: flex;
+    
+}
+
+#btn-aluno{
+    border: solid 2px #000000;
+}
+
+.esquerda input{
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: #FB9964;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    color: #ffffff;
+}
+
+.select-classe{
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: #FB9964;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    color: #ffffff;
+}
+
+.btn-choose{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.esquerda input::placeholder{
+    font-family: 'Titillium Web', sans-serif;
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.btn-form{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    background-color: #ED8EC1;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 13rem;
+    height: 3rem;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.conta{
+    font-family: 'Open Sans', 'sans-serif';
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.conta a{
+    font-family: 'Titillium Web', sans-serif;
+    color: #F03384;
+    text-decoration-line: underline;
+}
+
+.redirect{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redirect button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.redirect img{
+    width: 32px;
+    height: 34px;
+    margin-right: 7px;
+}
+
+.direita{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.logo-reg{
+    width: 195px;
+    height: 135px;
+}
+
+.banner-direita{
+    width: 500px;
+    height: 315px;
+    margin-bottom: 150px;
+  }
+
+  @media (max-width:1380px){
+
+    .box-body{
+        background-image: url(/src/assets/banner-cadastro-fundo.png);
+    }
+
+    .banner-direita{
+        margin-bottom: 325px;
+    }
+
+    .logo-reg{
+        margin-left: 135px;
+    }
+
+    .direita{
+        margin-top: 70px;
+    }
+
+    .esquerda-form{
+        height: 90%;
+    }
+
+    .banner-direita {
+        width: 450px;
+        height: 295px;
+    }
+
+  }
+
+  @media(max-width:1200px){
+
+    .box-body{
+        background-image: url(/src/assets/Cadastro-tablet.png);
+    }
+
+    .esquerda-form {
+        height: 60%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 493px;
+    }
+
+    .esquerda{
+        justify-content: center;
+    }
+
+    .direita{
+        display: none;
+    }
+
+    .logo{
+        display: unset;
+        margin-bottom: 25px;
+    }
+
+    .h1-login{
+        margin: 40px 0;
+        font-size: 55px;
+    }
+
+  }
+
+  @media (max-width:620px){
+
+    .box-body{
+        background-image: url(/src/assets/Cadastro-phone.png);
+    }
+
+    .h1-login{
+        font-size: 45px;
+        margin: 20px 0;
+    }
+
+    .logo{
+        display: unset;
+        margin-top: unset;
+        margin-bottom: 25px;
+        width: 145px;
+        height: 100px;
+    }
+    
+
+    .esquerda input {
+        height: 2rem;
+    }
+
+    .select-classe{
+        height: 2rem;
+    }
+
+    .esquerda-form{
+        width: 80%;
+        min-width: 324px;
+        min-height: unset;
+    }
+
+    .input-choose button{
+        width: 15px;
+    }
+    
+   
+    .btn-choose{
+        width: 8rem;
+        height: 2.2rem;
+    }
+
+    .btn-form{
+        width: 10rem;
+        height: 2.5rem;
+        font-size: 16px;
+    }
+
+
+    }
+
+  

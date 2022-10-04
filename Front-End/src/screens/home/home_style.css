@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#nav-bar-responsivo{
+    display: none;
+}
+
+.img-menu{
+    display: none;
+}
+
+.laranja{
+    color: #FF5D05;
+    min-width: 236px;
+}
+
+.ciano{
+    color: #2F6BB1;
+    min-width: 86px;
+}
+
+.vinho{
+    color: #7A2D72;
+    min-width: 151px;
+}
+
+.container-header-home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    min-width: 1148px;
+    height: 90px;
+}
+
+.header-Home{
+    padding: 11px 0;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    position: fixed;
+}
+
+.main-home{
+    padding-top: 90px;
+}
+
+#nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 46%;
+}
+
+.logo-header{
+    width: 130px;
+}
+
+.titulo-home{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
+
+.container-banner-home{
+    background-image: url(../../assets/Banner-home.png);
+    height: 820px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-banner-home{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 60px;
+    line-height: 130px;
+    color: #FFFFFF;
+}
+
+.btn-banner-home{
+    background: #44713D;
+    border-radius: 16.6016px;
+    padding: 25px 66px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+.como_funciona{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-como_funciona{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 100px;
+    letter-spacing: 0.13em;
+    color: #C845BB;
+    border-bottom: 9px solid rgba(166, 49, 185, 0.97);
+    margin: 23px 0;    
+}
+
+.container-como_funciona{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 82px 80px;
+    width: 85%;
+}
+
+.texto-como_funciona{
+    width: 46%;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    /* line-height: 42px; */
+    text-align: center;
+    color: #EA76DC;
+    
+}
+
+.astronauta{
+    width: 500px;
+}
+
+.nuvem-azul{
+    background-image: url(../../assets/nuvem-azul.png);
+    width: 100%;
+    height: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 133px 215px 300px 215px;
+}
+
+.et{
+    width: 580px;
+    border-radius: 180px;
+}
+
+.texto-nuvem-azul{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 33px;
+    /* line-height: 65px; */
+    text-align: center;
+    width: 46%;
+    color: #23484D;
+
+}
+
+
+.nuvem-amarela{
+    background-image: url(../../assets/nuvem-amarela.png);
+    width: 100%;
+    height: 972px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 133px 215px 0 215px;
+    margin-top: -379px;
+}
+
+.box-nuvem-amarela{
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    height: 972px;
+    margin-top: 270px;
+    width: 58%;
+}
+
+.sobre{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 65.5526px;
+    line-height: 100px;
+    letter-spacing: 0.13em;
+    color: #4D492C;
+    border-bottom: #4D492C solid 7px;
+    margin-top: 30px;
+}
+
+.texto-sobre{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 54px;
+    text-align: center;
+    color: #4D492C;
+    margin-top: 100px;
+    width: 75%;
+}
+
+.menino-nuvem-amarela{
+    width: 400px;
+}
+
+
+
+.desenvolvedores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-desenvolvedores{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 200px;
+    color: #4D492C;
+}
+
+.container-desenvolvedores{
+    display: flex;
+    grid-template-columns: 100px 100px 100px ;
+    justify-content: space-between;
+    width: 65%;
+    min-width: 1000px;
+}
+
+.dev{
+    max-width: 295px;
+}
+
+
+
+
+
+
+footer{
+    background: #7A2D72;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-top: 50px;
+}
+
+.texto-footer{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+@media(max-width: 1500px){
+
+    .texto-como_funciona {
+        font-size: 22px;
+    }
+
+    .astronauta{
+        width: 400px;
+    }
+
+    .nuvem-azul {
+        padding: 133px 150px 300px 150px;
+    }
+
+    .et{
+        width: 525px;
+    }
+
+    .texto-nuvem-azul{
+        font-size: 28px;
+    }
+
+
+
+    .nuvem-amarela{
+        padding: 133px 150px 300px 150px;
+    }
+}
+
+@media(max-width: 1160px){
+    .img-menu{
+        display: unset;
+        width: 40px;
+    }
+
+    #nav-bar{
+        display: none;
+    }
+
+    .container-header-home {
+         min-width: unset; 
+    }
+
+    #nav-bar-responsivo{
+        display: none;
+        position: fixed;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        top: 90px;
+        right: 0;
+        background-color: #ffffff;
+        padding: 50px;
+    }
+
+    .titulo-home {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .laranja{
+        border-bottom: 4px solid #ff5d05;
+    }
+
+    .vinho{
+        border-bottom: 4px solid #7A2D72;
+    }
+
+    .ciano{
+        border-bottom: 4px solid #2F6BB1;
+    }
+
+    .titulo-banner-home {
+        font-size: 33px;
+        line-height: 74px;
+    }
+
+    .btn-banner-home{
+        padding: 19px 55px;
+        font-size: 33px;
+    }
+
+    .container-como_funciona {
+        flex-direction: column;
+    }
+
+    .astronauta{
+        width: 300px;
+        margin-top: 40px;
+    }
+
+    .texto-como_funciona {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .et {
+        width: 420px;
+    }
+
+    .nuvem-azul{
+        flex-direction: column;
+    }
+
+    .texto-nuvem-azul{
+        width: 85%;
+        
+    }
+
+    .nuvem-azul{
+        justify-content: unset;
+    }
+
+    .sobre {
+        font-size: 42px;
+        line-height: 60px;
+        border-bottom: #4D492C solid 5px;
+
+    }
+
+    .texto-sobre{
+        width: 100%;
+    }
+
+    .nuvem-amarela{
+        padding: 133px 110px 300px 110px;
+        flex-direction: column;
+        background-size: cover;
+        height: 1853px;
+        margin-top: -441px;
+    }
+
+    .box-nuvem-amarela{
+        width: 100%;
+        height: 419px;
+    }
+
+    .menino-nuvem-amarela {
+        width: 397px;
+    }
+
+    .titulo-desenvolvedores {
+        font-size: 39px;
+        line-height: unset;
+        margin-bottom: 90px;
+    }
+
+    .container-desenvolvedores {
+        min-width: unset;
+        width: 80%;
+    }
+
+    .dev {
+        max-width: 192px;
+    }
+
+    .desenvolvedores{
+        
+        margin-top: -170px;
+
+    }
+}
+
+@media(max-width: 375px){
+    .img-menu{
+        display: none;
+    }
+
+    .logo-header{
+        margin: 0 auto;
+    }
+
+    .container-banner-home{
+        height: 525px;
+    }
+
+    .titulo-banner-home {
+        font-size: 27px;
+        line-height: 45px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .btn-banner-home {
+        padding: 15px 44px;
+        font-size: 22px;
+    }
+
+
+
+    .titulo-como_funciona {
+        font-size: 30px;
+        line-height: 69px;
+        border-bottom: 5px solid rgba(166, 49, 185, 0.97);
+        text-align: center;
+    }
+
+    .container-como_funciona{
+        padding: unset;
+    }
+
+    .texto-como_funciona {
+        width: 90%;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .nuvem-azul{
+        padding: 150px 0;
+        height: 1090px;
+    }
+
+    .et {
+        width: 365px;
+        border-radius: 150px;
+    }
+
+    .texto-nuvem-azul {
+        font-size: 21px;
+    }
+
+    .nuvem-amarela {
+        padding: 110px 0 272px;
+        height: 1360px;
+    }
+
+    .box-nuvem-amarela{
+        margin-top: 168px;
+    }
+
+    .sobre{
+        font-size: 38px;
+        margin-top: unset;
+    }
+
+    .texto-sobre {
+        font-size: 19px;
+        line-height: 42px;
+        margin-top: 79px;
+        width: 90%;
+    }
+
+    .menino-nuvem-amarela{
+        width: 275px;
+    }
+
+    .titulo-desenvolvedores {
+        font-size: 24px;
+        line-height: unset;
+        margin: 46px 0;
+    }
+
+    .container-desenvolvedores {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dev{
+        margin: 7px;
+        max-width: 145px;
+    }
+
+    .dev1{
+        margin-left: 80px;
+    }
+
+    .dev2{
+        margin-right: 80px;
+    }
+}
