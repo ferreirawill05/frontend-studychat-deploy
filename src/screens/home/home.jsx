@@ -54,7 +54,8 @@ export default class Cadastro extends Component {
               <span className="titulo-banner-home">BEM VINDO A NOSSA PLATAFORMA</span>
               <span className="titulo-banner-home">PARA ACESSAR SEUS CHATS</span>
               <Link to={ () => {
-                if (parseJWT().role === 1) {
+                console.log(parseJWT());
+                if (parseJWT().TipoUsuario === "1") {
                   return '/meuschats'
                 }
                 else{
@@ -66,20 +67,20 @@ export default class Cadastro extends Component {
               <section className="como_funciona">
                   <h2 className="titulo-como_funciona">Como funciona?</h2>
                   <div className="container-como_funciona">
-                      <p className="texto-como_funciona">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesett </p>
+                      <p className="texto-como_funciona">Dentro da plataforma é possível que o professor crie tarefas e as disponibilize para os estudantes, que podem remotamente fazer o acesso desta atividade e executá-las</p>
                       <img className="astronauta" src={astronauta} alt="Astronauta" />
                   </div>
               </section>
   
               <section className="nuvem-azul">
                   <img className='et' src={et} alt="et" />
-                  <p className="texto-nuvem-azul">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+                  <p className="texto-nuvem-azul">De forma interativa, o chat funciona como uma conversa na qual é enviado a pergunta e as alternativas de resposta para os alunos. Ao escolherem uma das alternativas, o software analisa os resultados de forma ágil, e retorna sua assertividade.</p>
               </section>
   
               <section className="nuvem-amarela">
                 <div className="box-nuvem-amarela">
                   <h2 className="sobre"> Sobre nós</h2>
-                  <p className="texto-sobre">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+                  <p className="texto-sobre">O StudyChat SESI-SP 113 foi desenvolvido por estudantes do 3º ano do Ensino Médio pelo método Scrum, através de um projeto iniciado nas aulas da disciplina de robótica</p>
                 </div>
                 <img src={menino} alt="" className="menino-nuvem-amarela" />
               </section>

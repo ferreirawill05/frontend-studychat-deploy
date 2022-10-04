@@ -31,7 +31,7 @@ export default class MeusChats extends Component {
   };
 
   nivelAcesso = () => {
-    if (parseJWT().role !== 2 ) {
+    if (parseJWT().TipoUsuario !== "1" ) {
       console.log("este usuario n é professor");
     }
   }
@@ -49,13 +49,7 @@ export default class MeusChats extends Component {
 
   salvarQuestionarios = (event) => {
 
-    const token = {
-      headers: {
-         Authorization: "Bearer " + localStorage.getItem('usuario-login')
-      }
-   }
-
-    api.get('api/questionarios', token)
+    api.get('api/questionarios/todos')
 
       .then(resposta => {
         if (resposta.status === 200) {
@@ -102,7 +96,7 @@ export default class MeusChats extends Component {
     if (usuarioAutenticacao()) {
       
     
-      if (parseJWT().role === 1) {
+      if (parseJWT().TipoUsuario === "1") {
         
       
       return (

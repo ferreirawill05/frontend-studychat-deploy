@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* !!! alterar box-body, não limitar o tamanho de nada!!! */
+/* !!! arrumar imagem do undraw!!!*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+} 
+
+input {
+    all: unset;
+}
+
+
+
+.btn-questionario{
+    background-color: #6E48AA;
+    border-radius: 20px;
+    padding: 15px 25px;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 20px;
+}
+
+.container-questionarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:150px;
+}
+
+.chat{
+    width: 500px;
+    height: 500px;
+    border: solid 3px #6E48AA;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mensagens{
+    height: 420px;
+    overflow: auto;
+    width: 100%;
+    padding: 22px 8px;
+}
+
+.titulo-msg{
+    background-color: #6E48AA;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    max-width: 70%;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 5px 0;
+    width: fit-content;
+}
+
+.msg-enviada{
+    background-color: #9400d9;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: right;
+    max-width: 70%;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 5px 0 ;
+}
+
+.direita-chat{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.resultado{
+    background-color: #6E48AA;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    max-width: 70%;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 5px 0;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.enunciado{
+    background-color: #6E48AA;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    max-width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 25px 0;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.alternativa{
+    background-color: #6E48AA;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: left;
+    max-width: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 5px 0;
+    width: fit-content;
+}
+
+#form{
+    width: 100%;
+    padding: 22px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#msg{
+    border: solid 2px #000000;
+    width: 65%;
+    border-radius: 9px 0 0 9px;
+}
+
+.btn-chat{
+    background-color: #ffffff;
+    height: 28px;
+    border: solid 2px #000000;
+    width: 13%;
+    border-radius: 0 9px 9px 0;
+    border-left: unset;
+    font-weight: bold;
+}

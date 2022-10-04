@@ -1,133 +1,166 @@
-import React from "react";
+import React, { Component } from 'react';
+import css from './chat.css'
 import logo from '../../assets/logo.png'
-import icon from '../../assets/bot-icone.png'
-import butao from '../../assets/aviao-icone.png'
-import $ from "jquery";
-import css from './chat_style.css'
 import api from '../../services/api'
-import { Component } from 'react';
+import '../home//home_style.css'
 import { Link } from 'react-router-dom'
-import { render } from "react-dom";
 
-export default class Chat extends Component{
+import Bar from '../../assets/bars.svg'
 
-render()
-{
-    return(
-    <div className="body-chat">
-    <div className="header">
-    <img className="logo" src={logo}  alt="logo" />
-    </div>
 
-    <div class="chat_window">
-      <div class="top_menu">
-      <div class="title">Chat</div>
-    </div>
+export default class SimpleForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      materia: '',
+      sentimento: '',
+      questionarios: [],
+      questoes: [],
+      questao: 0,
+      isLoading: false,
+    };
+  }
 
-    <ul class="messages"></ul>
-      <div class="bottom_wrapper clearfix">
-      <div class="message_input_wrapper">
-      <input class="message_input" placeholder="Escreva sua resposta aqui..." />
-    </div>
+  
 
-    <div class="send_message">
-      <div class="icon"></div>
-      <div class="text">Enviar</div>
-      </div>
-    </div>
+  ListaQuestoesQuestionario(q){
 
-    </div>
-    
-    <div class="message_template">
-      <li class="message">
-      <div class="avatar"></div>
-      <div class="text_wrapper">
-      <div class="text"></div>
-    </div>
 
-    </li>
-      <button className="botao-sair" >DESISTIR</button>
-    </div>
-    </div>
-    )
-}
+    api.get('api/questoes/' + q.idQuestionario)
 
-function () {
-    var Message;
-    Message = function (arg) {
-        this.text = arg.text;
-        this.message_side = arg.message_side;
-        this.draw = function (_this) {
-            return function () {
-                var $message;
-                $message = $($('.message_template').clone().html());
-              $message.addClass(_this.message_side).find('.text').html(_this.text);
-              $('.messages').append($message);
-              return setTimeout(function () {
-                  return $message.addClass('appeared');
-              }, 0); 
-          };
-      }(this);
-      return this;
-  };
-  $(function () {
-      var getMessageText, message_side, sendMessage;
-      message_side = 'right';
-      getMessageText = function () {
-          var $message_input;
-          $message_input = $('.message_input');
-          return $message_input.val();
-      };
-      sendMessage = function (text) {
-          var $messages, message;
-          if (text.trim() === '') {
-              return;
+      .then(resposta => {
+        if (resposta.status === 200) {
+          this.setState({ questoes: resposta.data});
+          console.log(this.state.questoes);
+          console.log(this.state.questao);
+        }
+      })
+      .catch(() => {
+        console.log('algo deu ruim ');
+      })
+  }
+
+  mostrarquest = () => {
+    var containerMsg = document.getElementById('mensagens');
+
+    if (this.state.questoes.length >= this.state.questao) {
+      var numero = this.state.questao - 1          
+      containerMsg.innerHTML = containerMsg.innerHTML +'<p class="enunciado">' + this.state.questao + ' - ' + this.state.questoes[numero].enunciado + '</p>'
+      containerMsg.innerHTML = containerMsg.innerHTML +'<p class="alternativa"> <b> A) </b> ' + this.state.questoes[numero].alternativaA + '</p>'
+      containerMsg.innerHTML = containerMsg.innerHTML +'<p class="alternativa" ><b> B) </b>' + this.state.questoes[numero].alternativaB + '</p>'
+      containerMsg.innerHTML = containerMsg.innerHTML +'<p class="alternativa" ><b> C) </b>' + this.state.questoes[numero].alternativaC + '</p>'
+      containerMsg.innerHTML = containerMsg.innerHTML +'<p class="alternativa"><b> D) </b>' + this.state.questoes[numero].alternativaD + '</p>'
+    }else{
+      containerMsg.innerHTML = containerMsg.innerHTML +'<p class="resultado"> Formulario respondido</p>'
+    }    
+  }
+
+  salvarQuestionarios = () => {
+
+    const token = {
+      headers: {
+         Authorization: "Bearer " + localStorage.getItem('usuario-login')
+      }
+   }
+
+    api.get('api/questionarios', token)
+
+      .then(resposta => {
+        if (resposta.status === 200) {
+          this.setState({ questionarios: resposta.data});
+          console.log(this.state.questionarios);
+        }
+      })
+      .catch(() => {
+        console.log('algo deu ruim ');
+      })
+  }
+
+
+
+  componentDidMount(){
+    this.salvarQuestionarios()
+    document.getElementById('form').addEventListener('submit', () => {
+      this.state.questao = this.state.questao + 1
+      console.log(this.state.questao);
+    } )
+  }
+  
+  render() {
+    return ( 
+      <>
+
+          <header className='header-Home'>
+              <nav className='container-header-home'>
+                  <Link to ="/"> <img className='logo-header' src={logo} alt="Logo" /> </Link> 
+                  
+                  <img className='img-menu' onClick={() => {
+                    var menu = document.getElementById("nav-bar-responsivo");
+                    if (menu.style.display === "flex") {
+                        menu.style.display = "none"
+                    } else{
+                        menu.style.display = "flex"
+                    }
+                  }} src={Bar} alt="botão menu" />
+  
+                  <div id='nav-bar'>
+                      <a className='laranja titulo-home' href="#">Como funciona?</a>
+                      <a className='vinho titulo-home' href="#">Sobre nós</a>
+                      <Link to="/meuschats" className='ciano titulo-home'>Chats</Link>
+                  </div>
+  
+                  <div id='nav-bar-responsivo'>
+                      <a className='laranja titulo-home' href="#">Como funciona?</a>
+                      <a className='vinho titulo-home' href="#">Sobre nós</a>
+                      <Link to="/meuschats" className='ciano titulo-home'>Chats</Link>
+                  </div> 
+  
+              </nav>
+          </header>
+        <div className="container-questionarios">
+          {
+            
+            this.state.questionarios.map((q) => {
+              return(
+                <button onClick={() => {
+                  this.ListaQuestoesQuestionario(q)
+                  this.state.questao = 0;
+                  var containerMsg = document.getElementById('mensagens');
+                  containerMsg.innerHTML = '';
+                 
+                  containerMsg.innerHTML = containerMsg.innerHTML +'<p class="titulo-msg">' + 'Iniciando o questionario: ' + q.materia + ' - ' + q.assunto + '</p>'
+                
+                }}  className='btn-questionario'>{q.materia} - {q.assunto}</button>
+              )
+            })
           }
-          $('.message_input').val('');
-          $messages = $('.messages');
-          message_side = message_side === 'left' ? 'right' : 'left';
-          message = new Message({
-              text: text,
-              message_side: message_side 
-          });
-          message.draw();
-          return $messages.animate({ scrollTop: $messages.prop('scrollHeight') }, 300);
-      };
-      $('.send_message').click(function (e) {
-          return sendMessage(getMessageText());
-      });
-      $('.message_input').keyup(function (e) {
-          if (e.which === 13) {
-              return sendMessage(getMessageText());
-          }
-      });
-      sendMessage('Hello Philip! :)');
-      setTimeout(function () {
-          return sendMessage('Hi Sandy! How are you?');
-      }, 1000);
-      return setTimeout(function () {
-          return sendMessage('I\'m fine, thank you!');
-      }, 2000);
-  });
+        </div>
+
+        <div className="chat">
+          <div id="mensagens" >
+            <p className='titulo-msg'>Escolha um questionario acima</p>
+          </div>
+          <form id='form' onSubmit={(event) => {
+              event.preventDefault();
+              var msg = document.getElementById('msg');
+              var containerMsg = document.getElementById('mensagens');
+
+              containerMsg.innerHTML = containerMsg.innerHTML +' <div class="direita-chat"> <p class="msg-enviada">' + msg.value + '</p> </div>'
+              
+              this.mostrarquest()
+              msg.value = ""
+            }} className="input-mensagem">
+            <input id='msg' type="text" />
+            <button className='btn-chat' >Enviar</button>
+          </form>
+        </div>
+
+
+      
+        
+        
+      </>
+    );
+  }
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//ideia fixar o numero de questões assim teriamos um fluxo construido alterando apenas os enunciados e questoes

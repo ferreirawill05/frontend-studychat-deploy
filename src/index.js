@@ -6,7 +6,6 @@ import Chat from "./screens/chat/chat.jsx"
 import Cadastro from './screens/cadastro/cadastro.jsx';
 import Home from "./screens/home/home.jsx"
 import MeusChats from './screens/meus-chats/meus-chats.jsx';
-import teste from './screens/chat-mock/teste.jsx'
 
 import {
   Route,
@@ -28,7 +27,6 @@ const routing = (
         <Route exact path="/cadastro" component={Cadastro}></Route>
         <Route exact path="/home" component={Home}></Route>
         <Route exact path="/meuschats" component={MeusChats}></Route>
-        <Route exact path="/teste" component={teste}></Route>
       </Switch>
     </div>
   </Router>
