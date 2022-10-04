@@ -34,7 +34,7 @@ const routing = (
 
 ReactDOM.render(
   routing,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
