@@ -76,7 +76,7 @@ export default class Cadastro extends Component {
                   <img className='et' src={et} alt="et" />
                   <p className="texto-nuvem-azul">De forma interativa, o chat funciona como uma conversa na qual é enviado a pergunta e as alternativas de resposta para os alunos. Ao escolherem uma das alternativas, o software analisa os resultados de forma ágil, e retorna sua assertividade.</p>
               </section>
-  
+   
               <section className="nuvem-amarela">
                 <div className="box-nuvem-amarela">
                   <h2 className="sobre"> Sobre nós</h2>

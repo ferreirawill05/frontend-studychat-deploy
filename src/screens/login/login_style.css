@@ -21,12 +21,13 @@
     flex-direction: column; 
     align-items: center;
     justify-content: space-between;
-    height: 500px;
-    width: 420px;
+    height: 600px;
+    width: 550px;
+    margin-top: 20px;
 }
 
 .txt-left p{
-    font-size: 23px;
+    font-size: 28px;
     color: white;
     font-family: 'Titillium Web', sans-serif;
     text-align: center; 
@@ -34,15 +35,16 @@
 }
 
 .txt-left h1{
-    font-size: 42px;
+    font-size: 58px;
     color: white;
     font-family: 'Single day', sans-serif;
+    margin-top: 1px;
 }
 
 .h1-login {
     font-family: 'Single day', sans-serif;
     font-size: 55px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .box-bodyL{
@@ -59,7 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 60px;
 }
 
 .esquerda p{
@@ -75,6 +77,12 @@
     margin-top: 90px;
 }
 
+.h1-login-direita{
+    font-family: 'Single day', sans-serif;
+    font-size: 56px;
+    margin: 10px;
+}
+
 .direitaL form{
     background: rgba(255, 255, 255, 0.73);
     border-radius: 21px;
@@ -83,7 +91,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 70%;
+    height: 55%;
 }
 
 .direitaL input{
@@ -179,24 +187,36 @@
     }
 
     .txt-left{
-        width: 500px;
+        width: 510px;
         height: 540px;
+        margin-top: 100px;
     }
 
     .txt-left h1 {
-        font-size: 50px;
+        font-size: 55px;
     }
 
     .txt-left p{
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .esquerdaL{
-        margin-top: 40px;
+        padding: 10px;
+    }
+
+    .direitaL{
+        margin-top: unset;
+    }
+
+    .contaL{
+        width: 325px;
+        margin-left: 35px;
     }
     
     .direitaL form{
-        height: 55%;
+        height: 48%;
+        margin-top: 10%;
+        margin-left: 35px;
     }
 }
 
@@ -207,14 +227,14 @@
     }
 
     .direitaL form {
-        height: 53%;
+        height: 50%;
     }
 
     .esquerdaL{
         display: none;
     }
 
-    .h1-login{
+    .h1-login-direita{
         font-size: 65px;
     }
 
@@ -227,8 +247,10 @@
     }
 
     .direitaL form {
-        height: 55%;
+        height: 50%;
         width: 80%;
+        margin-top: unset;
+        margin-left: unset;
     }
 
     .h1-login {
@@ -250,7 +272,8 @@
     }
 
     .contaL{
-        width: 305px;
+        width: 300px;
+        margin-left: unset;
     }
 
 
